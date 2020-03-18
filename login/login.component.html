@@ -1,0 +1,71 @@
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="Email" class="text-info">Email:</label><br>
+                                <input type="text" class="form-control" formControlName="Email" required email>
+                                <small *ngIf="Email.invalid && (profileForm.controls['Email'].dirty || profileForm.controls['Email'].touched)" class="text-danger">
+                                    <small *ngIf="Email.errors.required" class="text-danger">Email required</small>
+                                <small *ngIf="Email.errors.email" class="text-danger">Email is be Valid</small>
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="text" class="form-control" formControlName="password" required minlength="8">
+                                <small *ngIf="password.invalid && (profileForm.controls['password'].dirty || profileForm.controls['Email'].touched)" class="text-danger">
+                                    <small *ngIf="password.errors.required" class="text-danger">Password required</small>
+                                <small *ngIf="password.errors.minlength" class="text-danger">Password must be strong</small>
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="LOGIN">
+                                <div id="login-link">
+                                    <a class="text-info" data-toggle="modal" data-target="#myModal">forgot password</a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Enter Email</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="Email" class="text-info">Email:</label><br>
+                                                        <input type="text" class="form-control" formControlName="Email" required email>
+                                                        <div *ngIf="Email.errors">
+                                                            <small *ngIf="Email.errors.invalid && (profileForm.controls['Email'].dirty || profileForm.controls['Email'].touched)" class="text-danger">Email is required</small>
+                                                            <small *ngIf="Email.errors.email" class="text-danger">Email is be Valid</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" (click)="frgpass()">Save</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a routerLink='/register' class="text-info">Register here</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

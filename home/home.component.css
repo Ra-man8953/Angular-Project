@@ -1,0 +1,234 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+}
+
+a:hover {
+    border-top: 5px solid rgb(245, 154, 69);
+}
+
+.ban {
+    background-image: url('../../assets/header/banner-istock.png');
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    background-size: cover;
+}
+
+.ban1 {
+    padding-top: 10px;
+    font-size: 40px;
+    color: white;
+    text-align: left;
+}
+
+.ban span {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.ban button {
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: rgb(240, 130, 6);
+    border: none;
+    margin-top: 30px;
+}
+
+.second {
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+    color: rgb(116, 113, 113);
+}
+
+.second span {
+    border-bottom: 2px solid darksalmon;
+    padding-bottom: 10px;
+}
+
+.sec {
+    color: black;
+    font-size: 28px;
+}
+
+.third span {
+    border-bottom: 2px solid darksalmon;
+    padding-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: rgb(116, 113, 113);
+    padding-bottom: 0px;
+}
+
+.third {
+    width: 100%;
+    padding-top: 150px;
+}
+
+.thi {
+    color: rgb(24, 18, 18);
+    text-align: left;
+    padding-left: 39px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.c1 {
+    height: 290px;
+    background-image: url(../../assets/header/benifit-01.jpg);
+    background-repeat: no-repeat;
+}
+
+.c2 {
+    height: 290px;
+    background-image: url(../../assets/header/benifit-02-istock.jpg);
+    background-repeat: no-repeat;
+}
+
+.c3 {
+    height: 290px;
+    background-image: url(../../assets/header/benifit-03-istock.jpg);
+    background-repeat: no-repeat;
+}
+
+.third li {
+    padding-top: 10px;
+    list-style-type: none;
+    padding-left: 25px;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/header/check.png);
+    background-position-y: 14px;
+}
+
+h4 {
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+.forth {
+    /* height: 700px; */
+    width: 100%;
+    padding-top: 150px;
+    /* padding-top: 100px; */
+}
+
+.forth span {
+    border-bottom: 2px solid darksalmon;
+    padding-bottom: 10px;
+}
+
+.dim {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fifth {
+    /* height: 500px; */
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.fifth span {
+    border-bottom: 2px solid darksalmon;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.fifff {
+    text-align: center;
+}
+
+.fifth input {
+    padding-right: 146px;
+    padding-top: 5px;
+}
+
+.fifth button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgb(240, 130, 6);
+    border: none;
+    margin-top: 30px;
+}
+
+.six {
+    /* height: 350px; */
+    /* width: 100%; */
+    background-image: url('../../assets/header/footer.jpg');
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.f31 {
+    float: left;
+}
+
+.f32 {
+    float: left;
+}
+
+.f11 {
+    color: white;
+    text-align: left;
+    font-size: 16px;
+}
+
+.fc1 {
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.fn {
+    padding: 5px;
+}
+
+.fn1 {
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.bottom-right {
+    margin-top: 15px;
+    bottom: 0;
+    right: 0;
+}
+
+.forrr {
+    text-align: center;
+    font-size: 16px;
+}
+
+.s4 {
+    margin-top: 43px;
+    padding-top: 50px;
+}
+
+.but {
+    border-radius: 50px;
+}
