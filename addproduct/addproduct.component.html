@@ -1,0 +1,91 @@
+<app-header></app-header>
+
+<body>
+    <div *ngIf="!param">
+        <div id="reg">
+            <h3 class="text-center text-white pt-5">Add Product Form</h3>
+            <div class="container">
+                <div id="reg-row" class="row justify-content-center align-items-center">
+                    <div id="reg-column" class="col-md-6">
+                        <div id="reg-box" class="col-md-12">
+                            <form id="reg-form" class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                                <legend class="text-center text-info">Add Product</legend>
+                                <div class="form-group">
+                                    <label for="p_name" class="text-info">Product Name:</label><br>
+                                    <input type="text" class="form-control" formControlName="p_name" required minlength="3">
+                                    <small *ngIf="p_name.invalid && (profileForm.controls['p_name'].dirty || profileForm.controls['p_name'].touched)" class="text-danger">
+                                    <small *ngIf="p_name.errors.required" class="text-danger">product Name required</small>
+                                    <small *ngIf="p_name.errors.minlength" class="text-danger">Product Name should contain minimum three character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="p_desc" class="text-info">Product Description</label><br>
+                                    <input type="text" class="form-control" formControlName="p_desc" required minlength="10">
+                                    <small *ngIf="p_desc.invalid && (profileForm.controls['p_desc'].dirty || profileForm.controls['p_desc'].touched)" class="text-danger">
+                                    <small *ngIf="p_desc.errors.required" class="text-danger">Product Description required</small>
+                                    <small *ngIf="p_desc.errors.minlength" class="text-danger">Product Description should contain minimum ten character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="p_image" class="text-info">Product Image</label><br>
+                                    <input type="text" class="form-control" formControlName="p_image" required minlength="5">
+                                    <small *ngIf="p_image.invalid && (profileForm.controls['p_image'].dirty || profileForm.controls['p_image'].touched)" class="text-danger">
+                                    <small *ngIf="p_image.errors.required" class="text-danger">Product image required</small>
+                                    <small *ngIf="p_image.errors.minlength" class="text-danger">Product image should contain minimum five character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group" style="text-align: center;">
+                                    <input type="submit" class="btn btn-info btn-md" value="Add Product">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="param">
+        <div id="reg">
+            <h3 class="text-center text-white pt-5">Edit Product Form</h3>
+            <div class="container">
+                <div id="reg-row" class="row justify-content-center align-items-center">
+                    <div id="reg-column" class="col-md-6">
+                        <div id="reg-box" class="col-md-12">
+                            <form id="reg-form" class="form" [formGroup]="profileForm" (ngSubmit)="onproduct()">
+                                <legend class="text-center text-info">Edit Product</legend>
+                                <div class="form-group">
+                                    <label for="p_name" class="text-info">Product Name:</label><br>
+                                    <input type="text" class="form-control" formControlName="p_name" [(ngModel)]="p_names" required minlength="3">
+                                    <small *ngIf="p_name.invalid && (profileForm.controls['p_name'].dirty || profileForm.controls['p_name'].touched)" class="text-danger">
+                                    <small *ngIf="p_name.errors.required" class="text-danger">product Name required</small>
+                                    <small *ngIf="p_name.errors.minlength" class="text-danger">Product Name should contain minimum three character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="p_desc" class="text-info">Product Description</label><br>
+                                    <input type="text" class="form-control" formControlName="p_desc" [(ngModel)]="p_descs" required minlength="10">
+                                    <small *ngIf="p_desc.invalid && (profileForm.controls['p_desc'].dirty || profileForm.controls['p_desc'].touched)" class="text-danger">
+                                    <small *ngIf="p_desc.errors.required" class="text-danger">Product Description required</small>
+                                    <small *ngIf="p_desc.errors.minlength" class="text-danger">Product Description should contain minimum ten character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="p_image" class="text-info">Product Image</label><br>
+                                    <input type="text" class="form-control" formControlName="p_image" [(ngModel)]="p_images" required minlength="5">
+                                    <small *ngIf="p_image.invalid && (profileForm.controls['p_image'].dirty || profileForm.controls['p_image'].touched)" class="text-danger">
+                                    <small *ngIf="p_image.errors.required" class="text-danger">Product image required</small>
+                                    <small *ngIf="p_image.errors.minlength" class="text-danger">Product image should contain minimum five character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group" style="text-align: center;">
+                                    <input type="submit" class="btn btn-info btn-md" value="Update Product">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>

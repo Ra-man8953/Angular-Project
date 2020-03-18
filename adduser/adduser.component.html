@@ -1,0 +1,106 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<app-header></app-header>
+
+<body>
+    <div *ngIf="!param">
+        <div id="reg">
+            <h3 class="text-center text-white pt-5">Add User form</h3>
+            <div class="container">
+                <div id="reg-row" class="row justify-content-center align-items-center">
+                    <div id="reg-column" class="col-md-6">
+                        <div id="reg-box" class="col-md-12">
+                            <form id="reg-form" class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                                <legend class="text-center text-info">Add User</legend>
+                                <div class="form-group">
+                                    <label for="f_name" class="text-info">F_Name:</label><br>
+                                    <input type="text" class="form-control" formControlName="f_name" required minlength="3">
+                                    <small *ngIf="f_name.invalid && (profileForm.controls['f_name'].dirty || profileForm.controls['f_name'].touched)" class="text-danger">
+                                    <small *ngIf="f_name.errors.required" class="text-danger">First Name required</small>
+                                    <small *ngIf="f_name.errors.minlength" class="text-danger">First Name should contain minimum three character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="l_name" class="text-info">L_NAME:</label><br>
+                                    <input type="text" class="form-control" formControlName="l_name" required minlength="2">
+                                    <small *ngIf="l_name.invalid && (profileForm.controls['l_name'].dirty || profileForm.controls['l_name'].touched)" class="text-danger">
+                                    <small *ngIf="l_name.errors.required" class="text-danger">Last Name required</small>
+                                    <small *ngIf="l_name.errors.minlength" class="text-danger">Last Name should contain minimum two character</small>
+                                    </small>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email" class="text-info">Email:</label><br>
+                                    <input type="text" class="form-control" formControlName="Email" required email>
+                                    <small *ngIf="Email.invalid && (profileForm.controls['Email'].dirty || profileForm.controls['Email'].touched)" class="text-danger">
+                                    <small *ngIf="Email.errors.required" class="text-danger">Email required</small>
+                                    <small *ngIf="Email.errors.email" class="text-danger">Email is be Valid</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-info">Password:</label><br>
+                                    <input type="text" class="form-control" formControlName="password" required minlength="8">
+                                    <small *ngIf="password.invalid && (profileForm.controls['password'].dirty || profileForm.controls['password'].touched)" class="text-danger">
+                            <small *ngIf="password.errors.required" class="text-danger">Password required</small>
+                                    <small *ngIf="password.errors.minlength" class="text-danger">Password must be strong</small>
+                                    </small>
+                                </div>
+                                <div class="form-group" style="text-align: center;">
+                                    <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                    <input type="submit" class="btn btn-info btn-md" value="REGISTER">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="param">
+        <div id="reg">
+            <h3 class="text-center text-white pt-5">Update User form</h3>
+            <div class="container">
+                <div id="reg-row" class="row justify-content-center align-items-center">
+                    <div id="reg-column" class="col-md-6">
+                        <div id="reg-box" class="col-md-12">
+                            <form id="reg-form" class="form" [formGroup]="profileForms" (ngSubmit)="onuser()">
+                                <legend class="text-center text-info">Edit User</legend>
+                                <div class="form-group">
+                                    <label for="f_names" class="text-info">F_Name:</label><br>
+                                    <input type="text" class="form-control" formControlName="f_names" [(ngModel)]="f_namess" required minlength="3">
+                                    <small *ngIf="f_names.invalid && (profileForms.controls['f_names'].dirty || profileForms.controls['f_names'].touched)" class="text-danger">
+                                    <small *ngIf="f_names.errors.required" class="text-danger">First Name required</small>
+                                    <small *ngIf="f_names.errors.minlength" class="text-danger">First Name should contain minimum three character</small>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="l_name" class="text-info">L_NAME:</label><br>
+                                    <input type="text" class="form-control" formControlName="l_names" [(ngModel)]="l_namess" required minlength="2">
+                                    <small *ngIf="l_names.invalid && (profileForms.controls['l_names'].dirty || profileForms.controls['l_names'].touched)" class="text-danger">
+                                    <small *ngIf="l_names.errors.required" class="text-danger">Last Name required</small>
+                                    <small *ngIf="l_names.errors.minlength" class="text-danger">Last Name should contain minimum two character</small>
+                                    </small>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email" class="text-info">Email:</label><br>
+                                    <input type="text" class="form-control" formControlName="Emails" [(ngModel)]="emailss" required email>
+                                    <small *ngIf="Emails.invalid && (profileForms.controls['Emails'].dirty || profileForms.controls['Emails'].touched)" class="text-danger">
+                                    <small *ngIf="Emails.errors.required" class="text-danger">Email required</small>
+                                    <small *ngIf="Emails.errors.email" class="text-danger">Email is be Valid</small>
+                                    </small>
+                                </div>
+                                <div class="form-group" style="text-align: center;">
+                                    <input type="submit" class="btn btn-info btn-md" value="UPDATE">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>

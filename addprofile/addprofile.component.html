@@ -1,0 +1,42 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<app-header></app-header>
+
+<body>
+    <div id="reg">
+        <h3 class="text-center text-white pt-5">Add User Profile</h3>
+        <div class="container">
+            <div id="reg-row" class="row justify-content-center align-items-center">
+                <div id="reg-column" class="col-md-6">
+                    <div id="reg-box" class="col-md-12">
+                        <form id="reg-form" class="form">
+                            <legend class="text-center text-info">Add Profile</legend>
+                            <div class="form-group">
+                                <label for="uname" class="text-info">User Name:</label><br>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Email</label><br>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="u_id" class="text-info">User id</label><br>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="add" class="text-info">Address:</label><br>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group" style="text-align: center;">
+                                <input type="submit" class="btn btn-info btn-md" (click)='Addus()' value="Add Profile">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>
